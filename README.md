@@ -1,7 +1,5 @@
-
 # **PROJET : Analyse et cartographie des ports réseau**
-
-# Somaire
+## Sommaire
 
 - [Le projet](#le-projet)
 - [Les membres du groupe et leurs rôles](#les-membres-du-groupe-et-leurs-rôles)
@@ -9,9 +7,8 @@
 - [Difficultés rencontrées](#difficultés-rencontrées)
 - [Solutions trouvées](#solutions-trouvées)
 - [Amélioration possibles](#améliorations-possibles)
-
-
-# Le projet
+---
+### Le projet
 **Tâche principale** : Analyse de ports réseaux
 - Depuis un client scanner les ports de plusieurs machines
 - Récupérer le maximum d’informations
@@ -19,8 +16,8 @@
 **Tâche secondaire** : Création de profils de scan personnalisés
 
 
-# Les membres du groupe et leurs rôles
-
+---
+### Les membres du groupe et leurs rôles
 
 |            |                                                          **Sprint 1**                                                          |                                 **Sprint 2**                                 |
 | :--------: | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
@@ -28,66 +25,44 @@
 | **Xavier** |                                                           Product Owner                                                        |                                                                              |
 | **Revine**  |                                                                                                                               |                                  Scrum Master                                |
 | **Mohamed** |                                                                                                                               |                                  Product Owner                               |
-| **Commun** |                       Installation de toutes les VM et des logiciels pour pouvoir tester en même temps.                        |                                                                              
 
 
-# Choix techniques 
+
+---
+### Choix techniques 
 
 Pour mener à bien notre projet, nous avons utilisé :
 
-**Machines clients** : 
-_________________________________________
-
-- *VM 1* : PROJET 1 - CLIENT WINDOWS 11 
-- *OS* : Windows 11
-- *Compte & Mot de passe* : Wilder, Azerty1*
-- *Adresse Ip* : 172.16.10.10
-- *Masque* : 255.255.255.0
-
-_________________________________________
-
-- *VM 2* :  PROJET 1 - CLIENT UBUNTU 
-- *OS* : Ubuntu 24.04
-- *Compte & Mot de passe* : wilder, Azerty1*
-- *Adresse Ip* : 172.16.10.20
-- *Masque* : 255.255.255.0
-
-_________________________________________
-
-- *VM 3* :  PROJET 1 - WindowsServer
-- *OS* : Windows Server 2025 GUI
-- *Compte & Mot de passe* : Administrator, Azerty1*
-- *Adresse Ip* : 172.16.10.5
-- *Masque* : 255.255.255.0
-
-_________________________________________
-
-- *VM 4* : PROJET 1 - DebianServer 
-- *OS* : Debian 13 CLI
-- *Compte & Mot de passe* : Root, Azerty1*
-- *Adresse Ip* : 172.16.10.6
-- *Masque* : 255.255.255.0
-_________________________________________
-
-**Logiciels**
-
-- *NetCat* :
-- *Nmap* : Nmap version 7.94SVN https://nmap.org
+| Rôle | Nom de la VM | OS | Adresse IP | Identifiant (Admin) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Attaquant** | UBU01 | Ubuntu 24 LTS | 172.16.10.20 | wilder |
+| **Cible 1** | WIN01 | Windows 11 Pro | 172.16.10.10 | Wilder |
+| **Cible 2** | SRVWIN01 | Windows Server 2025 | 172.16.10.5 | Administrateur |
+| **Cible 3** | SRVLX01 | Debian 13 CLI | 172.16.10.6 | root / wilder |
+---
 
 
 
-# Difficultés rencontrées 
+### Logiciels :
+
+**1. Nmap**
+* **Nature de l'outil :** Nmap est un scanner de réseau open-source, considéré comme le standard absolu de l'industrie pour la découverte d'infrastructures et l'audit de sécurité.
+
+
+**2. Netcat (nc / ncat)**
+* **Nature de l'outil :** Souvent surnommé le "couteau suisse" du réseau TCP/IP, Netcat est un utilitaire léger mais extrêmement puissant permettant de lire et d'écrire des données brutes à travers des connexions réseau.
+
+---
+### Difficultés rencontrées 
 
 - Ouvrir des ports sur Debian 13 Server
 
-
-
-
-# Solutions trouvées 
+---
+### Solutions trouvées 
 
 - Utilisation de Ncat pour ouvrir les ports et de maintenir ouvert les ports pour la demonstration sur Debian 13 Server
 
-
-# Améliorations possibles
+---
+### Améliorations possibles
 
 - Paramètrage d'un serveur Apache
