@@ -10,21 +10,23 @@ Pour simuler un port vulnérable sur ce serveur nous utiliserons le logiciel Nca
 
 On lance Ncat à l'ecoute du port 700 par exemple grâce à cette commande:
    
+Configuration-et-ouverture-de-port-sous-Debian-13-serveur
+
 ![screen1.png](Ouverture du port 700)
 
-On s'assure de l'ouverture du port  avec la commande: 
 
+On s'assure de l'ouverture du port  avec la commande: 
 
 
 3.  On peut tester que Nmap  voit bien le port en le scannant depuis la VM d'attaque:
   
 
 
-### Faille 2 : Activation du protocole UDP (Port TCP 3389
+### Faille 2 : Activation du protocole UDP (Port TCP 3389)
 
 De la même façon on lance Ncat à l’écoute cette fois d'un port UDP grâce à cette commande et on l'envoie en background:
 
-![Capture d’écran du 2026-03-10 21-03-34.png](Ouverture du port UDC)
+![Port UDP](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/ouverture%20port%20UDP.png)
 
 On s'assure de l'ouverture du port  avec la commande: 
 
