@@ -19,7 +19,7 @@ Configuration-et-ouverture-de-port-sous-Debian-13-serveur
 
 De la même façon on lance Ncat à l’écoute cette fois d'un port UDP grâce à cette commande et on l'envoie en background:
 
-![Port UDP](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/ouverture%20port%20UDP.png](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/udpouvert.png)
+![Port UDP](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/udpouvert.png)
 
 ### Verdification de l'ouverture des ports
 
