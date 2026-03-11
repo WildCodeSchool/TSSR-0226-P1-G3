@@ -20,7 +20,7 @@ On s'assure de l'ouverture du port  avec la commande:
   
 
 
-### Faille 2 : Activation du protocole UDP (Port TCP 3389)
+### Faille 2 : Activation du protocole UDP (Port TCP 3389
 
 De la même façon on lance Ncat à l’écoute cette fois d'un port UDP grâce à cette commande et on l'envoie en background:
 
