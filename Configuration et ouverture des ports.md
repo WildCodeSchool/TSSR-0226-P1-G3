@@ -12,7 +12,7 @@ On lance Ncat à l'ecoute du port 700 par exemple grâce à cette commande:
    
 Configuration-et-ouverture-de-port-sous-Debian-13-serveur
 
-![screen1.png](Ouverture du port 700)
+![port700 ouvert]([Ouverture du port 700](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/screen1.png)
 
 
 On s'assure de l'ouverture du port  avec la commande: 
