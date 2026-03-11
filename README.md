@@ -1,16 +1,17 @@
 
 # **PROJET : Analyse et cartographie des ports réseau**
 
+# Somaire
+
+- [Le projet](#le-projet)
+- [Les membres du groupe et leurs rôles](#les-membres-du-groupe-et-leurs-rôles)
+- [Choix techniques](#choix-techniques)
+- [Difficultés rencontrées](#difficultés-rencontrées)
+- [Solutions trouvées](#solutions-trouvées)
+- [Amélioration possibles](#améliorations-possibles)
+
+
 # Le projet
-
-
-
-# Nmap et Netcat , c'est quoi ?
-
-- **Utilité**
-
-
-- **Possibilités**
 
 
 
