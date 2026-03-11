@@ -1,4 +1,4 @@
-
+e
 ### Préparation des cibles : Création de services vulnérables sous Debian 13 serveur
 
 ### Objectif technique
@@ -28,7 +28,11 @@ La commande suivante permet de lister les port ouverts et donc de verifier qu'on
 ![Rendu des ports ouverts](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/rendu.png)
 
 
+### Scan de verification avec Nmap depuis la VM d'attaque:
+
+On va bien sur verifier que l'on arrive bien à scanner les port que l'onvient d'ouvrir. Dans la capture ci dessous on voit que le port 700 est bien ouvert en TCP et le port 400 en UDP.
 
 
+![Rendu Nmap](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/rendunmap.png)
 
 
