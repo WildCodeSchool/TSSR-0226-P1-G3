@@ -12,18 +12,22 @@
 
 
 # Le projet
+**Tâche principale** : Analyse de ports réseaux
+- Depuis un client scanner les ports de plusieurs machines
+- Récupérer le maximum d’informations
 
+**Tâche secondaire** : Création de profils de scan personnalisés
 
 
 # Les membres du groupe et leurs rôles
 
 
-|            |                                                          **Sprint 1**                                                          |                                 **Sprint 2**                                 |     |
-| :--------: | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: | -
-| **Alexandre** |                                                        Scrum Master                                                         |                                                                              |     |
-| **Xavier** |                                                           Product Owner                                                        |                                                                              |     |
-| **Revine**  |                                                                                                                               |                                  Scrum Master                                |     |
-| **Mohamed** |                                                                                                                               |                                  Product Owner                               |     |
+|            |                                                          **Sprint 1**                                                          |                                 **Sprint 2**                                 |
+| :--------: | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| **Alexandre** |                                                        Scrum Master                                                         |                                                                              |
+| **Xavier** |                                                           Product Owner                                                        |                                                                              |
+| **Revine**  |                                                                                                                               |                                  Scrum Master                                |
+| **Mohamed** |                                                                                                                               |                                  Product Owner                               |
 | **Commun** |                       Installation de toutes les VM et des logiciels pour pouvoir tester en même temps.                        |                                                                              
 
 
@@ -67,21 +71,21 @@ _________________________________________
 
 **Logiciels**
 
-- *NetCat* : 
-- *Nmap* : 
+- *NetCat* :
+- *Nmap* : Nmap version 7.94SVN https://nmap.org
 
 
 
 # Difficultés rencontrées 
 
-
+- Ouvrir des ports sur Debian 13 Server
 
 
 
 
 # Solutions trouvées 
 
-
+- Utilisation de Ncat pour ouvrir les ports et de maintenir ouvert les ports pour la demonstration sur Debian 13 Server
 
 
 # Améliorations possibles
