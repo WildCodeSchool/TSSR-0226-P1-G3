@@ -9,13 +9,6 @@
 - [Amélioration possibles](#améliorations-possibles)
 ---
 ### Le projet
-**Tâche principale** : Analyse de ports réseaux
-- Depuis un client scanner les ports de plusieurs machines
-- Récupérer le maximum d’informations
-
-**Tâche secondaire** : Création de profils de scan personnalisés
-
-### Le projet
 
 **Nos missions principales :**
 * **Cartographie de l'infrastructure :** Utiliser une machine d'attaque sous Linux (Ubuntu) pour balayer un réseau cible et identifier les équipements actifs.
@@ -30,36 +23,44 @@ Le laboratoire est entièrement virtualisé. Les machines communiquent au sein d
 ---
 ### Les membres du groupe et leurs rôles
 
-|            |                                                          **Sprint 1**                                                          |                                 **Sprint 2**                                 |
-| :--------: | :----------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| **Alexandre** |                                                        Scrum Master                                                         |                                                                              |
-| **Xavier** |                                                           Product Owner                                                        |                                                                              |
-| **Revine**  |                                                                                                                               |                                  Scrum Master                                |
-| **Mohamed** |                                                                                                                               |                                  Product Owner                               |
+Afin de mener à bien ce projet dans le temps imparti, nous avons fonctionné en méthode Agile (Scrum) sur deux sprints, en nous répartissant les cibles d'audit.
 
+| Membre de l'équipe | Rôle Sprint 1 | Rôle Sprint 2 | Missions techniques principales |
+| :--- | :--- | :--- | :--- |
+| **Alexandre** | Scrum Master | Technicien | Audit et documentation de la cible Windows 11 / Ecriture du README.md |
+| **Xavier** | Product Owner | Technicien | Audit et documentation de la cible Debian 13 Server / Ecriture du script Bash |
+| **Revine** | Technicien | Scrum Master | Audit et documentation de la cible Debian 13 Server / Ecriture du README.md |
+| **Mohamed** | Technicien | Product Owner | Audit et documentation de la cible Windows Server 2025 / Ecriture du README.md |
 
 
 ---
 ### Choix techniques 
 
-Pour mener à bien notre projet, nous avons utilisé :
+Toutes les machines sont configurées sur le réseau interne de VirtualBox avec le masque `255.255.255.0` (/24).
 
-| Rôle | Nom de la VM | OS | Adresse IP | Identifiant (Admin) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Attaquant** | UBU01 | Ubuntu 24 LTS | 172.16.10.20 | wilder |
-| **Cible 1** | WIN01 | Windows 11 Pro | 172.16.10.10 | Wilder |
-| **Cible 2** | SRVWIN01 | Windows Server 2025 | 172.16.10.5 | Administrateur |
-| **Cible 3** | SRVLX01 | Debian 13 CLI | 172.16.10.6 | root / wilder |
+| Rôle | Nom de la VM | OS | Adresse IP | Identifiant | Mot de passe |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Attaquant** | UBU01 | Ubuntu 24 LTS | 172.16.10.20 | wilder | Azerty1* |
+| **Cible 1** | WIN01 | Windows 11 Pro | 172.16.10.10 | Wilder | Azerty1* |
+| **Cible 2** | SRVWIN01 | Windows Server 2025 | 172.16.10.5 | Administrateur | Azerty1* |
+| **Cible 3** | SRVLX01 | Debian 13 CLI | 172.16.10.6 | root / wilder | Azerty1* |
+
 ---
 
+### Logiciels utilisés
 
+Nous nous sommes appuyés sur deux outils complémentaires :
 
-### Logiciels :
+**1. Nmap** 
 
-**1. Nmap**
-
+C'est notre scanner réseau principal. Nous l'avons utilisé pour :
+* Balayer le réseau et identifier les machines actives.
+* Lister les ports ouverts sur nos différentes cibles (Windows, Debian).
+* Détecter les versions exactes des services en écoute, pour déduire les failles de sécurité.
 
 **2. Netcat**
+
+Utilité ???
 
 ---
 ### Difficultés rencontrées 
