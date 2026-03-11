@@ -46,11 +46,9 @@ Pour mener à bien notre projet, nous avons utilisé :
 ### Logiciels :
 
 **1. Nmap**
-* **Nature de l'outil :** Nmap est un scanner de réseau open-source, considéré comme le standard absolu de l'industrie pour la découverte d'infrastructures et l'audit de sécurité.
 
 
-**2. Netcat (nc / ncat)**
-* **Nature de l'outil :** Souvent surnommé le "couteau suisse" du réseau TCP/IP, Netcat est un utilitaire léger mais extrêmement puissant permettant de lire et d'écrire des données brutes à travers des connexions réseau.
+**2. Netcat**
 
 ---
 ### Difficultés rencontrées 
