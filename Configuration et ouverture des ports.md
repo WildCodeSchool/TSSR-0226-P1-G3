@@ -10,7 +10,7 @@ Pour simuler un port vulnérable sur ce serveur nous utiliserons le logiciel Nca
 
 On lance Ncat à l'ecoute du port 700 par exemple grâce à cette commande:
    
-![](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/screen1.png))
+![](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/screen1.png)
 
 On s'assure de l'ouverture du port  avec la commande: 
 
