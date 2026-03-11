@@ -1,5 +1,5 @@
 e
-### Préparation des cibles : Création de services vulnérables sous Debian 13 serveur
+## Préparation des cibles : Création de services vulnérables sous Debian 13 serveur
 
 ### Objectif technique
 Afin que notre outil de cartographie (Nmap) puisse détecter des ports ouverts, il faut ouvrir les ports sur le serveur distant. Un port réseau n'apparaît comme "ouvert" que si une application ou un service est en cours d'exécution et "écoute" le trafic entrant sur ce port. 
