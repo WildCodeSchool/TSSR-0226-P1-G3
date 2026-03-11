@@ -14,19 +14,21 @@ Configuration-et-ouverture-de-port-sous-Debian-13-serveur
 
 ![port700 ouvert](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/screen1.png)
 
-
-On s'assure de l'ouverture du port  avec la commande: 
-
-
-3.  On peut tester que Nmap  voit bien le port en le scannant depuis la VM d'attaque:
   
-
-
 ### Faille 2 : Activation du protocole UDP (Port TCP 3389)
 
 De la même façon on lance Ncat à l’écoute cette fois d'un port UDP grâce à cette commande et on l'envoie en background:
 
 ![Port UDP](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/ouverture%20port%20UDP.png)
 
-On s'assure de l'ouverture du port  avec la commande: 
+### Verdification de l'ouverture des ports
+
+La commande suivante permet de lister les port ouverts et donc de verifier qu'on a bien ouvert les ports:
+
+![Rendu des ports ouverts](https://github.com/WildCodeSchool/TSSR-0226-P1-G3/blob/Configuration-et-ouverture-de-port-sous-Debian-13-serveur/rendu.png)
+
+
+
+
+
 
