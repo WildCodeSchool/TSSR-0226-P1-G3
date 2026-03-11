@@ -89,3 +89,5 @@ _________________________________________
 
 
 # Améliorations possibles
+
+- Paramètrage d'un serveur Apache
