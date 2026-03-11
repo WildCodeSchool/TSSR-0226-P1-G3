@@ -15,6 +15,17 @@
 
 **Tâche secondaire** : Création de profils de scan personnalisés
 
+### Le projet
+
+**Nos missions principales :**
+* **Cartographie de l'infrastructure :** Utiliser une machine d'attaque sous Linux (Ubuntu) pour balayer un réseau cible et identifier les équipements actifs.
+* **Analyse de vulnérabilités :** Sonder les ports ouverts sur les différents systèmes d'exploitation (Windows 11, Windows Server 2025, Debian 13) pour détecter les services en cours d'exécution et identifier d'éventuelles failles de configuration.
+
+**Notre mission secondaire :**
+* **Automatisation :** Concevoir un script Bash interactif permettant d'automatiser ces scans via des profils prédéfinis (rapide, furtif, agressif) afin de fournir un outil réutilisable par d'autres techniciens.
+
+**Environnement technique :**
+Le laboratoire est entièrement virtualisé. Les machines communiquent au sein d'un réseau interne isolé, ce qui permet d'exécuter des analyses réseau intrusives.
 
 ---
 ### Les membres du groupe et leurs rôles
