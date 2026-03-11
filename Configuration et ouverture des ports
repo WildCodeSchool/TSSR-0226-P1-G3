@@ -10,7 +10,7 @@ Pour simuler un port vulnérable sur ce serveur nous utiliserons le logiciel Nca
 
 On lance Ncat à l'ecoute du port 700 par exemple grâce à cette commande:
    
-![Capture d’écran du 2026-03-10 20-57-24.png](Ouverture du port 700)
+![https&colon;&sol;&sol;www&period;cs&period;cmu&period;edu&sol;~15131&sol;f17&sol;topics&sol;vim&sol;vim-cheatsheet&period;pdf](Ouverture du port 700)
 
 On s'assure de l'ouverture du port  avec la commande: 
 
@@ -24,6 +24,7 @@ On s'assure de l'ouverture du port  avec la commande:
 
 De la même façon on lance Ncat à l’écoute cette fois d'un port UDP grâce à cette commande et on l'envoie en background:
 
+![Capture d’écran du 2026-03-10 21-03-34.png](Ouverture du port UDC)
 
 On s'assure de l'ouverture du port  avec la commande: 
 
