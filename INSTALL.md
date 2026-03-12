@@ -191,7 +191,8 @@ La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les s
 #### ( ps : executer ces étapes pour chaque ports )
 
 ### Étape finale : Verification avec nmap sur ma VM linux
-<img width="1920" height="955" alt="fin" src="https://github.com/user-attachments/assets/007219b8-16cb-4a8e-a966-a3459cf3a2bf" />
+<img width="775" height="272" alt="VirtualBox_UBU01_12_03_2026_21_25_42" src="https://github.com/user-attachments/assets/532eadf8-de90-4fe5-8f7c-ec283e8c9a30" />
+
 
 - Nous voyons bien nos 2 port (139 et 445 )
 
