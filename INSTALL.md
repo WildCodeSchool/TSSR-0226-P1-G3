@@ -39,6 +39,7 @@ Les machines virtuelles sont déployées sous l'hyperviseur VirtualBox. Pour gar
 
 ![Configuration Réseau VirtualBox](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/01_config_reseau_Vbox.png)
 
+# Tâche principale 
 
 # Installation/Mise en place de la solution
 
@@ -201,3 +202,74 @@ La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les s
 - Nous voyons bien nos 2 port (139 et 445 )
 
 - **Resultat** : Nos 2 ports sont ouvert !
+
+# Tâche secondaire :
+
+### Code source du script `nmap.sh`
+
+Voici le script bash que nous avons développé pour automatiser nos requêtes :
+
+```bash
+#!/bin/bash
+#demandons a l'utilisateur quel script il veut utilisateur
+
+echo "Quel type de scan voulez vous faire?" && echo "0: TCP" && echo "1: UDP" && echo "2: SYN only" && echo "3: Ping/host"
+read type
+echo "Quelle vitesse voules vous utiliser(0-4)? Du moins bruyant au plus agressif"
+read vitesse
+echo "Quel niveau d'info voulez vous?(0-3)Du moins détaillé au plus detaillé."
+read verb
+echo "Quelle option voulez vous?" && echo "0: toute" && echo "1: OS" && echo "2: version de service"
+read opt
+read -p "Rentrez l'ip cible" ip
+
+#type de scan
+if (($type >= 0 && $type <= 3))
+then
+type_array=("-sT" "-sU" "-sS" "-sn")
+type2=${type_array[$type]}
+else 
+echo "erreur de saisie"
+exit 1
+fi
+
+#vitesse du scan
+if (($vitesse >= 0 && $vitesse <= 5 ))
+then
+vitesse_array=("-T0" "-T1" "-T2" "-T3" "-T4 -F")
+vitesse2=${vitesse_array[$vitesse]}
+    if (($vitesse > 2))
+    then
+    read -p "Attention vous allez attirer l'attention! Voulez vous poursuivre? Y/N" reponse
+        if [[ $reponse != "Y" ]]
+            then echo "terminé!" && exit 1
+        fi
+    fi
+else
+echo "erreur de saisie"
+exit 1
+fi
+
+#verbosite
+if (($verb >= 0 && $verb <= 3))
+then
+verb_array=("" "-v" "-vv" "-vvv")
+verb2=${verb_array[$verb]}
+else 
+echo "erreur de saisie"
+exit 1
+fi
+
+#options
+if (($opt >= 0 && $opt <= 2))
+then
+opt_array=("-A" "-O" "-sV")
+opt2=${opt_array[$opt]}
+else
+echo "erreur de saisie"
+exit 1
+fi
+
+test= sudo nmap $type2 $vitesse2 $verb2 $opt2 $ip
+echo "$test"
+```
