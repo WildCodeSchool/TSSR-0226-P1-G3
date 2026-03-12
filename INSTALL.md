@@ -143,7 +143,7 @@ La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les s
 - Pour ce faire , nous allons ouvrir **des ports** dans le pare feu-windows
 
 ### Nom des ports à ouvrir
-- port 139 (TCP)
+- port 139 (netbios)
 - port 445 (SMB)
 
 ### Étape 1 : ouvrez le panneau de commande 
