@@ -45,6 +45,9 @@ Toutes les machines sont configurées sur le réseau interne de VirtualBox avec 
 | **Cible 2** | SRVWIN01 | Windows Server 2025 | 172.16.10.5 | Administrateur | Azerty1* |
 | **Cible 3** | SRVLX01 | Debian 13 CLI | 172.16.10.6 | root / wilder | Azerty1* |
 
+
+![](Projet1-G3.png)
+
 ---
 
 ### Logiciels utilisés
