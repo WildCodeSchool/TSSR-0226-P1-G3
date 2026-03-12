@@ -95,12 +95,6 @@ Depuis une Invite de commandes (en tant qu'administrateur), la commande suivante
 
 **Résultat attendu :** Les lignes indiquant l'écoute sur `0.0.0.0:445` et `0.0.0.0:3389` sont bien présentes, confirmant que la cible est prête à être analysée.
 
-### Étape 4 : Vérification Nmap
-
-A remplir par Alexandre
-
-Conclusion : ....................dzqdzqd......
-
 ## Préparation des cibles : Création de services vulnérables sur SRVLX01 (Debian 13 Serveur)
 
 ### Étape 1 : Service HTTP (Apache2) - Port 80
