@@ -53,7 +53,7 @@ Toutes les machines sont configurées sur le réseau interne de VirtualBox avec 
 </div>
 
 
-![](Ressources/Projet1-G3.png)
+![](Ressources/Images/Projet1-G3.png)
 
 ---
 
