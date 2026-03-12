@@ -6,7 +6,8 @@
 
 
 ### Étape finale : Verification avec nmap sur ma VM linux
-<img width="1920" height="955" alt="fin" src="https://github.com/user-attachments/assets/007219b8-16cb-4a8e-a966-a3459cf3a2bf" />
+<img width="775" height="272" alt="VirtualBox_UBU01_12_03_2026_21_25_42" src="https://github.com/user-attachments/assets/f06c4757-be1a-44bd-91dc-e8c774957503" />
+
 
 - Nous voyons bien nos 2 port (139 et 445 )
 
