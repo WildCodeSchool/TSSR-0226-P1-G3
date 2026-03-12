@@ -68,9 +68,9 @@ C'est notre scanner réseau principal. Nous l'avons utilisé pour :
 * Lister les ports ouverts sur nos différentes cibles (Windows, Debian).
 * Détecter les versions exactes des services en écoute, pour déduire les failles de sécurité.
 
-**2. Netcat**
+**2. Netcat (Ncat)**
 
-Utilité ???
+L'outil historique Netcat a évolué et nous utilisons ici Ncat, sa version moderne intégrée directement au projet Nmap. Ncat permet d'établir des connexions directes entre différentes machines, à la manière d'une connexion SSH, mais en transmettant les données en texte clair (sans chiffrement).
 
 ---
 ### Difficultés rencontrées 
