@@ -25,6 +25,8 @@ Le laboratoire est entièrement virtualisé. Les machines communiquent au sein d
 
 Afin de mener à bien ce projet dans le temps imparti, nous avons fonctionné en méthode Agile (Scrum) sur deux sprints, en nous répartissant les cibles d'audit.
 
+<div align="center">
+
 | Membre de l'équipe | Rôle Sprint 1 | Rôle Sprint 2 | Missions techniques principales |
 | :--- | :--- | :--- | :--- |
 | **Alexandre** | Scrum Master | Technicien | Audit et documentation de la cible Windows 11 / Ecriture du README.md |
@@ -32,11 +34,14 @@ Afin de mener à bien ce projet dans le temps imparti, nous avons fonctionné en
 | **Revine** | Technicien | Scrum Master | Audit et documentation de la cible Debian 13 Server / Ecriture du README.md |
 | **Mohamed** | Technicien | Product Owner | Audit et documentation de la cible Windows Server 2025 / Ecriture du README.md |
 
+</div>
 
 ---
 ### Choix techniques 
 
 Toutes les machines sont configurées sur le réseau interne de VirtualBox avec le masque `255.255.255.0` (/24).
+
+<div align="center">
 
 | Rôle | Nom de la VM | OS | Adresse IP | Identifiant | Mot de passe |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -44,6 +49,8 @@ Toutes les machines sont configurées sur le réseau interne de VirtualBox avec 
 | **Cible 1** | WIN01 | Windows 11 Pro | 172.16.10.10 | Wilder | Azerty1* |
 | **Cible 2** | SRVWIN01 | Windows Server 2025 | 172.16.10.5 | Administrateur | Azerty1* |
 | **Cible 3** | SRVLX01 | Debian 13 CLI | 172.16.10.6 | root / wilder | Azerty1* |
+
+</div>
 
 
 ![](Projet1-G3.png)
