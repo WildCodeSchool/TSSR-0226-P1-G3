@@ -5,7 +5,7 @@
 - pour ce faire , nous allons ouvrir **des ports** dans le pare feu-windows
 
 ### nom des ports à ouvrir
-- port 139 (TCP)
+- port 139 (netbios)
 - port 445 (SMB)
 
 ## étape 1 : ouvrez le panneau de commande 
