@@ -1,53 +1,55 @@
 # Prérequis techniques
+
 Nous avons mis en place 4 VMs pour ce projet :
 
-- _VM 1_ : PROJET 1 - CLIENT WINDOWS 11
-- _OS_ : Windows 11
-- _Compte & Mot de passe_ : Wilder, Azerty1*
-- _Adresse Ip_ : 172.16.10.10
-- _Masque_ : 255.255.255.0
+- _VM 1_ : PROJET 1 - CLIENT WINDOWS 11
+  - _OS_ : Windows 11
+  - _Compte & Mot de passe_ : Wilder, Azerty1*
+  - _Adresse Ip_ : 172.16.10.10
+  - _Masque_ : 255.255.255.0
 
 ---
 
-- _VM 2_ : PROJET 1 - CLIENT UBUNTU
-- _OS_ : Ubuntu 24.04
-- _Compte & Mot de passe_ : wilder, Azerty1*
-- _Adresse Ip_ : 172.16.10.20
-- _Masque_ : 255.255.255.0
+- _VM 2_ : PROJET 1 - CLIENT UBUNTU
+  - _OS_ : Ubuntu 24.04
+  - _Compte & Mot de passe_ : wilder, Azerty1*
+  - _Adresse Ip_ : 172.16.10.20
+  - _Masque_ : 255.255.255.0
 
 ---
 
-- _VM 3_ : PROJET 1 - WindowsServer
-- _OS_ : Windows Server 2025 GUI
-- _Compte & Mot de passe_ : Administrator, Azerty1*
-- _Adresse Ip_ : 172.16.10.5
-- _Masque_ : 255.255.255.0
+- _VM 3_ : PROJET 1 - WindowsServer
+  - _OS_ : Windows Server 2025 GUI
+  - _Compte & Mot de passe_ : Administrator, Azerty1*
+  - _Adresse Ip_ : 172.16.10.5
+  - _Masque_ : 255.255.255.0
 
 ---
 
-- _VM 4_ : PROJET 1 - DebianServer
-- _OS_ : Debian 13 CLI
-- _Compte & Mot de passe_ : Root, Azerty1*
-- _Adresse Ip_ : 172.16.10.6
-- _Masque_ : 255.255.255.0
+- _VM 4_ : PROJET 1 - DebianServer
+  - _OS_ : Debian 13 CLI
+  - _Compte & Mot de passe_ : Root, Azerty1*
+  - _Adresse Ip_ : 172.16.10.6
+  - _Masque_ : 255.255.255.0
 
 Les machines virtuelles sont déployées sous l'hyperviseur VirtualBox. Pour garantir l'étanchéité de l'environnement de test et permettre une analyse de trafic non filtrée (indispensable pour les scans de ports), la configuration suivante a été appliquée sur l'interface de la VM :
 
 * **Mode d'accès :** Réseau interne (`intnet`)
 * **Mode Promiscuité :** "Autoriser tout"
 
-> ![Configuration Réseau VirtualBox](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/01_config_reseau_Vbox.png)
+![Configuration Réseau VirtualBox](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/01_config_reseau_Vbox.png)
+
 
 # Installation/Mise en place de la solution
 
-### Préparation des cibles : Création de services vulnérables sur WIN01 (Windows 11)
+## Préparation des cibles : Création de services vulnérables sur WIN01 (Windows 11)
 
 ### Objectif technique
 Afin que notre outil de cartographie (Nmap) puisse détecter des ports ouverts, il ne suffit pas de désactiver le pare-feu. Un port réseau n'apparaît comme "ouvert" que si une application ou un service est en cours d'exécution et "écoute" le trafic entrant sur ce port. 
 
 Pour simuler un environnement d'entreprise réaliste et vulnérable, nous avons volontairement activé deux services critiques et fréquemment ciblés par les attaquants sur notre client Windows 11 (IP : 172.16.10.10) : le partage de fichiers (SMB) et le Bureau à distance (RDP).
 
-### Faille 1 : Activation du protocole SMB (Port TCP 445)
+### Étape 1 : Activation du protocole SMB (Port TCP 445)
 
 Le protocole SMB (Server Message Block) est utilisé pour le partage de ressources sur le réseau.
 * **Procédure de mise en place :**
@@ -67,7 +69,7 @@ Le protocole SMB (Server Message Block) est utilisé pour le partage de ressourc
 
 * **Résultat :** Le système d'exploitation lance le service de partage et se met en écoute sur le port **445**.
 
-### Faille 2 : Activation du protocole RDP (Port TCP 3389)
+### Étape 2 : Activation du protocole RDP (Port TCP 3389)
 
 Le protocole RDP (Remote Desktop Protocol) permet la prise de contrôle à distance de la machine.
 * **Procédure de mise en place :**
@@ -83,7 +85,7 @@ Le protocole RDP (Remote Desktop Protocol) permet la prise de contrôle à dista
 
 * **Résultat :** Le service de bureau à distance est démarré et écoute sur le port **3389**.
 
-### Validation locale de l'ouverture des ports
+### Étape 3 : Validation locale de l'ouverture des ports
 Avant de procéder aux tests distants avec notre client Linux, nous avons vérifié localement que les services répondaient bien. 
 Depuis une Invite de commandes (en tant qu'administrateur), la commande suivante a été exécutée :
 `netstat -ano | findstr "LISTENING"`
@@ -92,112 +94,110 @@ Depuis une Invite de commandes (en tant qu'administrateur), la commande suivante
 
 **Résultat attendu :** Les lignes indiquant l'écoute sur `0.0.0.0:445` et `0.0.0.0:3389` sont bien présentes, confirmant que la cible est prête à être analysée.
 
-### Préparation des cibles : Création de services vulnérables sur SRVLX01 (Debian 13 Serveur)
+### Étape 4 : Vérification Nmap
 
-### 4.1 Service HTTP (Apache2) - Port 80
+A remplir par Alexandre
+
+Conclusion : ....................dzqdzqd......
+
+## Préparation des cibles : Création de services vulnérables sur SRVLX01 (Debian 13 Serveur)
+
+### Étape 1 : Service HTTP (Apache2) - Port 80
 Installation du serveur Web Apache pour simuler une interface de gestion non sécurisée.
 
 **Commande :** `apt update && apt install apache2 -y`
 
 ![Installation Apache2](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/04_install_apache.png)
 
-### 4.2 Service FTP (vsftpd) - Port 21
+### Étape 2 : Service FTP (vsftpd) - Port 21
 Déploiement du service de transfert de fichiers vsftpd pour simuler un vecteur d'exfiltration de données en clair (protocole non chiffré).
 
 **Commande :** `apt install vsftpd -y`
 
 ![Installation vsftpd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/05_install_ftp.png)
 
-## V. Audit et Vérification de la Surface d'Exposition
+### Audit et Vérification de la Surface d'Exposition
 La validation du paramétrage repose sur une analyse locale des sockets et un scan distant de conformité.
 
-### 5.1 Analyse locale des sockets (ss)
+### Étape 3 : Analyse locale des sockets (ss)
 La commande ss -tunlp confirme que les services Apache et vsftpd sont en état d'écoute (state LISTEN) sur les ports respectifs 80 et 21.
 
 **Commande :** `ss -tunlp`
 
 ![Analyse des ports en écoute](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/06_ports_locaux.png)
 
-### 5.2 Scan de reconnaissance distant (Nmap)
+### Étape 4 : Scan de reconnaissance distant (Nmap)
 Un scan de découverte a été réalisé depuis la machine attaquante du laboratoire (UBU01 - 172.16.10.20). Les résultats valident l'ouverture effective et la visibilité des ports 21 (FTP) et 80 (HTTP) depuis le réseau.
 
 **Commande :** `nmap 172.16.10.6`
 
 ![Résultat du scan Nmap](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/07_audit_nmap_final.png)
 
-### 5.3 Test de réponse applicative (HTTP)
+### Étape  5: Test de réponse applicative (HTTP)
 La connectivité est confirmée par l'accès à la page par défaut d'Apache depuis le navigateur de la machine d'attaque, prouvant que le service est fonctionnel.
 
 ![Test de connexion Web](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
 
-## Conclusion : 
+### Conclusion : 
 La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les services vulnérables sont correctement exposés.
 
-
-### Préparation des cibles : Création de services vulnérables sur SRVWIN01 (Windows Serveur 2025)
+## Préparation des cibles : Création de services vulnérables sur SRVWIN01 (Windows Serveur 2025)
 
 ### Objectif : 
-- paramétrer les VM cibles en y laissant des failles afin d'utiliser les logiciel nmap et netcat (installer sur notre VM linux) pour analyser ces failles et les cartographier
-- pour ce faire , nous allons ouvrir **des ports** dans le pare feu-windows
+- Paramétrer les VM cibles en y laissant des failles afin d'utiliser les logiciel nmap et netcat (installer sur notre VM linux) pour analyser ces failles et les cartographier
+- Pour ce faire , nous allons ouvrir **des ports** dans le pare feu-windows
 
 ### Nom des ports à ouvrir
 - port 139 (TCP)
 - port 445 (SMB)
 
-## étape 1 : ouvrez le panneau de commande 
+### Étape 1 : ouvrez le panneau de commande 
 - Rechercher "Control Panel" dans la barre de recherche Windows.
 <img width="1278" height="864" alt="etape 1 failles" src="https://github.com/user-attachments/assets/19916f54-ecc1-4b6e-9e17-4453fd49808d" />
 
-## étape 2 : Sélectionnez le système et la sécurité 
-- cliquer sur "System and Security"
+### Étape 2 : Sélectionnez le système et la sécurité 
+- Cliquer sur "System and Security"
 <img width="1278" height="864" alt="etapes 2" src="https://github.com/user-attachments/assets/ef6d0e46-4715-4831-bc66-aed663419bdc" />
 
-## étape 3 : Choisissez le pare-feu de Windows Defender 
-- cliquer sur "Windows Defender Firewall"
+### Étape 3 : Choisissez le pare-feu de Windows Defender 
+- Cliquer sur "Windows Defender Firewall"
 <img width="1278" height="864" alt="3" src="https://github.com/user-attachments/assets/ae05c101-1336-478a-a130-cff407885ffb" />
 
-## étape 4 : Sélectionnez Paramètres avancés 
-- sur le coté gauche , cliquer sur "Advanced settings"
+### Étape 4 : Sélectionnez Paramètres avancés 
+- Sur le coté gauche , cliquer sur "Advanced settings"
 <img width="1278" height="864" alt="4" src="https://github.com/user-attachments/assets/2af70704-b0be-41d8-9a97-e1e76aef6b99" />
 
-## étape 5 : Créez une nouvelle règle
-- choisissez d'abord les Règles entrantes (réguler le trafic entrant) puis les Règles sortantes (réguler le trafic sortant) pour chaque ports
+### Étape 5 : Créez une nouvelle règle
+- Choisissez d'abord les Règles entrantes (réguler le trafic entrant) puis les Règles sortantes (réguler le trafic sortant) pour chaque ports
 - Puis sur la droite , cliquer sur "new Rule"
  <img width="927" height="864" alt="derniere" src="https://github.com/user-attachments/assets/a5c5f051-aa07-471f-b5bd-6db74dae106a" />
 
-## étape 6 : Sélectionnez le port
+### Étape 6 : Sélectionnez le port
 - Choisir Port Pour créer une règle pour un port spécifique
 <img width="1278" height="864" alt="66" src="https://github.com/user-attachments/assets/286ddce6-cea8-457d-bb7c-6307f2391d54" />
 
-## étape 7 : Choisissez TCP 
-- ajouter les ports manuelement dans la zone de texte
+### Étape 7 : Choisissez TCP 
+- Ajouter les ports manuelement dans la zone de texte
 <img width="1278" height="864" alt="6" src="https://github.com/user-attachments/assets/87f874c7-4295-4ffc-b7c3-69118cbc2473" />
 
-## étape 8 : Autoriser la connexion
+### Étape 8 : Autoriser la connexion
 - Décidez si vous souhaitez autoriser la connexion via ce port
 <img width="1278" height="864" alt="1" src="https://github.com/user-attachments/assets/d7521159-d68d-446e-abf7-8e4aed598103" />
 
-## étape 9 : Spécifiez les options de la règle
+### Étape 9 : Spécifiez les options de la règle
 <img width="1278" height="864" alt="2" src="https://github.com/user-attachments/assets/278b00f7-d0ce-4dae-84da-91c9f18b3a27" />
 
 
-## étape 10 : nom et description
-- ajouter un nom a la régle et une description si vous le souhaiter
+### Étape 10 : nom et description
+- Ajouter un nom a la régle et une description si vous le souhaiter
 <img width="1278" height="864" alt="33" src="https://github.com/user-attachments/assets/e2840296-8328-4bc3-b934-b5adab3f570b" />
 
 
 #### ( ps : executer ces étapes pour chaque ports )
 
-## étape finale : Verification avec nmap sur ma VM linux
+### Étape finale : Verification avec nmap sur ma VM linux
 <img width="1920" height="955" alt="fin" src="https://github.com/user-attachments/assets/007219b8-16cb-4a8e-a966-a3459cf3a2bf" />
 
 - Nous voyons bien nos 2 port (139 et 445 )
 
-- **resultat** : Nos 2 ports sont ouvert !
-
-
-# FAQ
--
--
--
-
+- **Resultat** : Nos 2 ports sont ouvert !
