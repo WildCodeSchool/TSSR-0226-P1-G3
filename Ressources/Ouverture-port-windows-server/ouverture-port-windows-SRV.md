@@ -31,7 +31,8 @@
 ## étape 5 : Créez une nouvelle règle
 - choisissez d'abord les Règles entrantes (réguler le trafic entrant) puis les Règles sortantes (réguler le trafic sortant) pour chaque ports
 - Puis sur la droite , cliquer sur "new Rule"
- <img width="1278" height="864" alt="5" src="https://github.com/user-attachments/assets/a58a756b-801f-4076-9eb8-ba933cfcd69d" />
+ <img width="927" height="864" alt="derniere" src="https://github.com/user-attachments/assets/a5c5f051-aa07-471f-b5bd-6db74dae106a" />
+
  
 
 ## étape 6 : Sélectionnez le port
