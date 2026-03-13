@@ -121,28 +121,6 @@ La commande ss -tunlp confirme que les services Apache et vsftpd sont en état d
 
 ![Analyse des ports en écoute](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/06_ports_locaux.png)
 
-### Étape 4 : Scan de reconnaissance distant (Nmap)
-Un scan de découverte a été réalisé depuis la machine attaquante du laboratoire (UBU01 - 172.16.10.20). Les résultats valident l'ouverture effective et la visibilité des ports 21 (FTP) et 80 (HTTP) depuis le réseau.
-
-**Commande :** `nmap 172.16.10.6`
-
-![Résultat du scan Nmap](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/07_audit_nmap_final.png)
-
-### Étape  5: Test de réponse applicative (HTTP)
-La connectivité est confirmée par l'accès à la page par défaut d'Apache depuis le navigateur de la machine d'attaque, prouvant que le service est fonctionnel.
-
-![Test de connexion Web](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
-
-### Étape 5.1 : Test de bannière de service (FTP)
-La réponse du service est confirmée par la récupération de la bannière vsFTPd via l'outil Netcat depuis la machine d'attaque, prouvant que le service de transfert de fichiers est opérationnel et prêt à l'emploi.
-
-**Commande :** `nc -vn 172.16.10.6 21`
-
-![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/09_test_service_FTP.png)
-
-### Conclusion : 
-La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les services vulnérables sont correctement exposés.
-
 ## Préparation des cibles : Création de services vulnérables sur SRVWIN01 (Windows Serveur 2025)
 
 ### Objectif : 
@@ -189,21 +167,12 @@ La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les s
 ### Étape 9 : Spécifiez les options de la règle
 <img width="1278" height="864" alt="2" src="https://github.com/user-attachments/assets/278b00f7-d0ce-4dae-84da-91c9f18b3a27" />
 
-
 ### Étape 10 : nom et description
 - Ajouter un nom a la régle et une description si vous le souhaiter
 <img width="1278" height="864" alt="33" src="https://github.com/user-attachments/assets/e2840296-8328-4bc3-b934-b5adab3f570b" />
 
 
 #### ( ps : executer ces étapes pour chaque ports )
-
-### Étape finale : Verification avec nmap sur ma VM linux
-<img width="775" height="272" alt="VirtualBox_UBU01_12_03_2026_21_25_42" src="https://github.com/user-attachments/assets/532eadf8-de90-4fe5-8f7c-ec283e8c9a30" />
-
-
-- Nous voyons bien nos 2 port (139 et 445 )
-
-- **Resultat** : Nos 2 ports sont ouvert !
 
 # Tâche secondaire :
 
