@@ -138,7 +138,7 @@ Pour valider le fonctionnement du service FTP sur le port 21, j'utilise l'outil 
 
 **Commande :** `nc -vn 172.16.10.6 21`
 
-![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/09_test_service_FTP)
+![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/09_test_service_FTP.png)
 
 ### Conclusion : 
 La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les services vulnérables sont correctement exposés.
