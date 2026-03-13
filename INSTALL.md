@@ -133,6 +133,13 @@ La connectivité est confirmée par l'accès à la page par défaut d'Apache dep
 
 ![Test de connexion Web](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
 
+### Étape 5.1 : Test de bannière de service (FTP)
+Pour valider le fonctionnement du service FTP sur le port 21, j'utilise l'outil Netcat. Cette commande permet de récupérer la bannière du service et confirme que le serveur est prêt à établir une session de transfert.
+
+**Commande :** `nc -vn 172.16.10.6 21`
+
+![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
+
 ### Conclusion : 
 La cible SRVLX01 est opérationnelle. L'isolation réseau est effective et les services vulnérables sont correctement exposés.
 
