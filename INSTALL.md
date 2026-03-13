@@ -134,7 +134,7 @@ La connectivité est confirmée par l'accès à la page par défaut d'Apache dep
 ![Test de connexion Web](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
 
 ### Étape 5.1 : Test de bannière de service (FTP)
-Pour valider le fonctionnement du service FTP sur le port 21, j'utilise l'outil Netcat. Cette commande permet de récupérer la bannière du service et confirme que le serveur est prêt à établir une session de transfert.
+La réponse du service est confirmée par la récupération de la bannière vsFTPd via l'outil Netcat depuis la machine d'attaque, prouvant que le service de transfert de fichiers est opérationnel et prêt à l'emploi.
 
 **Commande :** `nc -vn 172.16.10.6 21`
 
