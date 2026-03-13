@@ -30,3 +30,9 @@ Un scan de découverte a été réalisé depuis la machine attaquante du laborat
 La connectivité est confirmée par l'accès à la page par défaut d'Apache depuis le navigateur de la machine d'attaque, prouvant que le service est fonctionnel.
 
 ![Test de connexion Web](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/08_test_apache_web.png)
+
+### Étape 5.1 : Test de bannière de service (FTP)
+La réponse du service est confirmée par la récupération de la bannière vsFTPd via l'outil Netcat depuis la machine d'attaque, prouvant que le service de transfert de fichiers est opérationnel et prêt à l'emploi.
+
+![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/09_test_service_FTP.png)
+
