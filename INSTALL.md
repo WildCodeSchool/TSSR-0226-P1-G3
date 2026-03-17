@@ -1,3 +1,5 @@
+# Sommaire
+- [Prérequis techniques](#prérequis-techniques)
 # Prérequis techniques
 
 Nous avons mis en place 4 VMs pour ce projet :
