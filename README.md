@@ -76,6 +76,7 @@ L'outil historique Netcat a évolué et nous utilisons ici Ncat, sa version mode
 ### Difficultés rencontrées 
 
 - Ouvrir des ports sur Debian 13 Server
+- utilisation de NetCat
 
 ---
 ### Solutions trouvées 
