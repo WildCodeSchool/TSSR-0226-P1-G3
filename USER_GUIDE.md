@@ -39,7 +39,7 @@ Une fois lancé, le script fonctionne comme un menu interactif. Il va vous deman
 - **Cible Windows :** Vous verrez notamment les ports **139** et **445** (partage de fichiers) ouverts.
 - **Cible Linux :** Vous verrez notamment les ports **21** (FTP) et **80** (HTTP) ouverts.
   
-![resultas](Ressources/Images/resultats-scripts.png)
+![resultats](Ressources/Images/resultats_scripts.png)
 
 
 ### 5. Exemple simple : Vérification manuelle
