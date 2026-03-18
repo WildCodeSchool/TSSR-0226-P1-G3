@@ -28,7 +28,7 @@ Une fois lancé, le script fonctionne comme un menu interactif. Il va vous deman
 - **Le niveau d'information que va retourner le scan.**
 - **Les options supplémentaires, notamment la recherche de version ou d'OS**
 - **L'adresse IP :** Enfin, tapez l'adresse de la cible (par exemple `172.16.10.6` pour notre serveur Debian) et appuyez sur Entrée.
-- 
+  
 mettre le screen ici
 
 
@@ -38,7 +38,7 @@ mettre le screen ici
 
 - **Cible Windows :** Vous verrez notamment les ports **139** et **445** (partage de fichiers) ouverts.
 - **Cible Linux :** Vous verrez notamment les ports **21** (FTP) et **80** (HTTP) ouverts.
-- 
+  
 mettre le screen ici
 
 
