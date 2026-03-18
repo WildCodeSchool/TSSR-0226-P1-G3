@@ -59,7 +59,7 @@ La connectivité est confirmée si vous arrivez sur la page par défaut d'Apache
 
 **Vérification du Port 21 (FTP) :**
 
-Dans votre terminal, tapez la commande :
+Dans votre terminal (machine cible), tapez la commande :
 ```bash
 nc 172.16.10.6 21
 ```
