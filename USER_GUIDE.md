@@ -63,7 +63,7 @@ Dans votre terminal (machine d'attaque - Ubuntu), tapez la commande :
 nc 172.16.10.6 21
 ```
 
-La réception du message 220 (vsFTPd 3.0.3) confirme que le service vsFTPd est bien ouvert sur la cible et accessible à distance depuis notre machine d'attaque.
+La réception du message 220 (vsFTPd 3.0.3) confirme que le service FTP est bien ouvert sur la cible et accessible à distance depuis notre machine d'attaque.
 
 ![Test de connexion 220 vsFTPd](Ressources/Ouverture-port-debian/SCREENSHOTS_DEBIAN/09_test_service_FTP.png)
 
