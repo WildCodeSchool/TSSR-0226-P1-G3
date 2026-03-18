@@ -77,11 +77,14 @@ L'outil historique Netcat a évolué et nous utilisons ici Ncat, sa version mode
 
 - Ouvrir des ports sur Debian 13 Server
 - utilisation de NetCat
+- compréhension de la demande du client
 
 ---
 ### Solutions trouvées 
 
 - Utilisation de Ncat pour ouvrir les ports et de maintenir ouvert les ports pour la demonstration sur Debian 13 Server
+- utilisation de nmap seulement
+- mise au clair de la demande avec le client
 
 ---
 ### Améliorations possibles
