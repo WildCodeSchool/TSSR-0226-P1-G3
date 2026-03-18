@@ -36,7 +36,6 @@ Une fois lancé, le script fonctionne comme un menu interactif. Il va vous deman
 
 À la fin du processus, le script affiche le résultat du scan à l'écran. Regardez la colonne **STATE** (état). Si la ligne indique **`open`** (ouvert), c'est que vous avez trouvé une cible :
 
-- **Cible Windows :** Vous verrez notamment les ports **139** et **445** (partage de fichiers) ouverts.
 - **Cible Linux :** Vous verrez notamment les ports **21** (FTP) et **80** (HTTP) ouverts.
   
 ![resultats](Ressources/Images/RESULTATS.png)
